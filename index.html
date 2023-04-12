@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>СШЛИ "ИТ"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/56.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>itlyceum</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowScrll('#main')">О школе</a>
+            <a href="#" onclick="slowScrll('#overiew')" title="Премущества">Премущества</a>
+            <a href="#" onclick="slowScrll('#contacts')" title="Контакты">Контакты</a>
+            <a href="#" onclick="slowScrll('#faq')" title="Ответы на вопросы">Победы</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Учеба</h1>
+        <h3>как смысл жизни!</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Наши методы учебы помогут вам!</h2>
+            <span>Большой выбор кружков ждет вас!</span>
+        </div>
+        <div class="text">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dicta
+                veritatis aperiam laboriosam hic at commodi provident consequuntur quae
+                modi! Commodi consequatur fuga fugiat facere facilis iusto unde expedita
+                deleniti, in reiciendis beatae officiis accusantium necessitatibus harum,
+                laboriosam dolore adipisci! Nemo sapiente architecto dolorem rem iusto non
+                mollitia minus odit?</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Кружки</h2>
+        <h4>С нами все интересней и полезней</h4>
+        <div class="img">
+            <img src="img/6038586442907648.png" alt="">
+            <span>С++</span>
+        </div>
+        <div class="img">
+            <img src="img/1306210cc613a033c8b86e43a084e2a6.png" alt="">
+            <span>Разработка игр</span>
+        </div>
+        <div class="img">
+            <img src="img/prevyu_programmy_dlya_3d_modelirovaniya_i_animaczii_2.jpg" alt="">
+            <span>3D моделирование</span>
+        </div>
+        <div class="img">
+            <img src="img/html_css_javascript.jpeg" alt="">
+            <span>Основы HTML CSS JAVASCRIPT </span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center>
+            <h5>Обратная связь</h5>
+        </center>
+        <form id="form_input">
+            <label for="name">Имя <span>*</span></label><br>
+            <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+
+            <label for="email">Ваша почта <span>*</span></label><br>
+            <input type="email" placeholder="Введите email" name="email" id="email"><br>
+
+            <label for="message"> Cообщение <span>*</span></label><br>
+            <textarea type="message" placeholder="Введите ваше сообщение " name="message" id="message"></textarea><br>
+            <div id="mess_send" class="btn">Отправить</div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        function slowScrll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if ($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+
+        });
+    </script>
+
+
+</body>
+
+</html>
